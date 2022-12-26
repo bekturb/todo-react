@@ -152,6 +152,10 @@ ul li.editMode input[type=text] {
     display: block;
 }
 
-ul li.editMode label {
+.form__label-edit {
     display: none;
+}
+
+.form__input-edit{
+    display: block !important;
 }
