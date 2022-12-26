@@ -1,7 +1,7 @@
 import '../../styles/App.css';
 import React, {useEffect, useState} from "react";
 import ListItems from "../ListItems/ListItems";
-import {baseURL} from "../../Api/api";
+import {baseURL} from "../../api/api";
 import axios from "axios";
 
 function App() {
