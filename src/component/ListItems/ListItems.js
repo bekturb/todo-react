@@ -14,13 +14,13 @@ const ListItems = ({el, deleteItem, updateItem, getCompletedItems}) => {
         updateItem(id, newItem)
     }
 
-    const completedItem = (id) => {
-        getCompletedItems(id)
+    const completedItem = (id, checked) => {
+        getCompletedItems(id, checked)
     }
 
     return (
         <li>
-            <input onChange={() => completedItem(el.id)} type="checkbox" checked={el.checked ? true : false} />
+            <input onChange={() => completedItem(el.id, el.checked)} type="checkbox" checked={el.checked ? true : false} />
             <label className={openedInput ? "form__label-edit" : ""}>{el.title}</label>
             <input className={openedInput ? "form__input-edit" : ""} onChange={(e) => setNewItem(e.target.value)} type="text" defaultValue={el.title}/>
             <button onClick={() => {openedInput ? removeInputClass(el.id, newItem) : addInputClass()}}  className="edit">{openedInput ?  "Close" : "Edit"}</button>
